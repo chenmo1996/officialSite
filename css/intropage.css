@@ -1,0 +1,33 @@
+#intro .slide{
+	position:relative;
+}
+#intro .slide img{
+	width:37.5%;
+	height:auto;
+	position:absolute;
+	left:7.4%;
+	bottom:32.7%;
+
+}
+#intro .slide h1 {
+	font-family:PingFang-SC;
+	font-size:0.6rem;
+	color:rgb(0, 255, 184);
+	position:absolute;
+	top:23.5%;
+	right:38.5%;
+	margin-bottom:9%;
+}
+
+#intro .slide p{
+	margin-top: -4%;
+	display:block;
+	width:34%;
+	position:absolute;
+	right:8.2%;
+	font-family:PingFang-SC;
+	font-size:0.20rem;
+	line-height:0.33rem;
+	color:#fff;
+}
+
