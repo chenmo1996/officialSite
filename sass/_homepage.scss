@@ -1,0 +1,215 @@
+$home_apple_w:2.68rem;
+$home_apple_h:2.23rem;
+$home_apple_l:12.00rem;
+$home_apple_t:1.58rem;
+// pm
+$home_pm_w:2.16rem;
+$home_pm_h:2.28rem;
+$home_pm_l:14.90rem;
+$home_pm_t:3.10rem;
+// design
+$home_design_w:2.04rem;
+$home_design_h:2.11rem;
+$home_design_l:9.71rem;
+$home_design_t:3.35rem;
+//web
+$home_web_w:2.75rem;
+$home_web_h:2.42rem;
+$home_web_l:7.00rem;
+$home_web_t:5.40rem;
+//game
+$home_game_w:2.17rem;
+$home_game_h:1.86rem;
+$home_game_l:12.70rem;
+$home_game_t:5.90rem;
+//lab
+$home_lab_w:2.43rem;
+$home_lab_h:2.36rem;
+$home_lab_l:16.10rem;
+$home_lab_t:7.00rem;
+//android
+$home_android_w:2.37rem;
+$home_android_h:1.78rem;
+$home_android_l:10.22rem;
+$home_android_b:1.30rem;
+//join
+$home_join_w:3.00rem;
+$home_join_h:2.40rem;
+$home_join_l:1.20rem;
+$home_join_t:6.00rem;
+
+$home_tag_w:0.65rem;
+$home_tag_h:0.35rem;
+//$apple_tag_pos: (-$home_tag_h*1.1) (-$home_tag_w*1.1) 0 0;
+#welcome {
+  width: 18%;
+  /* height: 19%;
+  background: url(../src/pic/home-heading.png) 0 0 no-repeat;
+  background-size: 100% 100%; */
+  /* background-position: 0 0;
+  background-image:url(../src/pic/homepage.png);
+  /* margin: 147px 0 0 133px; */
+  position: absolute;
+  top: 147px;
+  left: 133px;
+}
+
+#welcome img {
+  width: 100%;
+}
+
+#home {
+    /* background-color: #000; */
+    /* width:100%;
+    height:100%; */
+    position: relative;
+    background: url(../src/pic/homepage/nomove.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.home_group {
+    position: absolute;
+    background-size: 100% 100%;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+    &:hover{
+      -webkit-transform: scale3d(1.2,1.2,1.2);
+      -moz-transform: scale3d(1.2,1.2,1.2);
+      -ms-transform: scale3d(1.2,1.2,1.2);
+      -o-transform: scale3d(1.2,1.2,1.2);
+      transform: scale3d(1.2,1.2,1.2);
+      .home_tag{
+        display: block;
+      }
+    }
+}
+.home_tag {
+  display: none;
+  position: absolute;
+  width: $home_tag_w;
+  height: $home_tag_h;
+  //background-image:url("../src/pic/homepage/");
+}
+
+
+#home_apple {
+    left: $home_apple_l;
+    top: $home_apple_t;
+    width: $home_apple_w;
+    height: $home_apple_h;
+    background-image: url("../src/pic/homepage/iOS-Assistor.png");
+}
+
+
+#home_apple .home_tag {
+    background: url("../src/pic/homepage/iOSTagAssistor.png") no-repeat;
+  background-size: 100% 100%;
+    right: -2%;
+    //margin: $apple_tag_pos;
+}
+
+#home_pm {
+  left: $home_pm_l;
+  top: $home_pm_t;
+  width: $home_pm_w;
+  height: $home_pm_h;
+  background-image: url("../src/pic/homepage/PM-Assistor.png");
+}
+
+
+#home_pm .home_tag {
+  background: url("../src/pic/homepage/pmTagAssistor.png") no-repeat;
+  background-size: 100% 100%;
+  right: -15%;
+  //margin: $apple_tag_pos;
+}
+
+#home_design {
+  left: $home_design_l;
+  top: $home_design_t;
+  width: $home_design_w;
+  height: $home_design_h;
+  background-image: url("../src/pic/homepage/Design-Assistor.png");
+}
+
+
+#home_design .home_tag {
+  background: url("../src/pic/homepage/DesignTagAssistor.png") no-repeat;
+  background-size: 100% 100%;
+  left: -15%;
+  //margin: $apple_tag_pos;
+}
+
+#home_web {
+  left: $home_web_l;
+  top: $home_web_t;
+  width: $home_web_w;
+  height: $home_web_h;
+  background-image: url("../src/pic/homepage/Web-Assistor.png");
+}
+
+
+#home_web .home_tag {
+  background: url("../src/pic/homepage/WebTagAssistor.png") no-repeat;
+  background-size: 100% 100%;
+  //margin: $apple_tag_pos;
+}
+
+#home_game {
+  left: $home_game_l;
+  top: $home_game_t;
+  width: $home_game_w;
+  height: $home_game_h;
+  background-image: url("../src/pic/homepage/game-Assistor.png");
+}
+
+
+#home_game .home_tag {
+  background: url("../src/pic/homepage/GameTagAssistor.png") no-repeat;
+  background-size: 100% 100%;
+  //margin: $apple_tag_pos;
+}
+
+#home_lab {
+  left: $home_lab_l;
+  top: $home_lab_t;
+  width: $home_lab_w;
+  height: $home_lab_h;
+  background-image: url("../src/pic/homepage/Lab-Assistor.png");
+}
+
+
+#home_lab .home_tag {
+  background: url("../src/pic/homepage/LabTagAssistor.png") no-repeat;
+  background-size: 100% 100%;
+  //margin: $apple_tag_pos;
+}
+
+#home_android {
+  left: $home_android_l;
+  bottom: $home_android_b;
+  width: $home_android_w;
+  height: $home_android_h;
+  background-image: url("../src/pic/homepage/android-Assistor.png");
+}
+
+
+#home_android .home_tag {
+  background: url("../src/pic/homepage/AndroidTagAssistor.png") no-repeat;
+  background-size: 100% 100%;
+  right:0;
+  top:-15%;
+  //margin: $apple_tag_pos;
+}
+
+#home_join {
+  left: $home_join_l;
+  top: $home_join_t;
+  width: $home_join_w;
+  height: $home_join_h;
+  background-image: url("../src/pic/homepage/come-Assistor.png");
+}
+

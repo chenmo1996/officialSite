@@ -172,9 +172,9 @@ var loader = new resLoader({
         '../js/jquery.fullPage.js',
         '../js/main.js',
         '../js/navbar.js',
-        '../src/pic/1-Assistor.png',
-        '../src/pic/2-Assistor.png',
-        '../src/pic/3-Assistor.png',
+        '../src/pic/intropage/1-Assistor.png',
+        '../src/pic/intropage/2-Assistor.png',
+        '../src/pic/intropage/3-Assistor.png',
         '../src/pic/BG.png',
     ],
     onStart: function(total) {
@@ -203,7 +203,7 @@ var loader = new resLoader({
             $("#pre_body").fadeOut("400").remove();
             $("#main_body").css('display', 'block');
             $(".page").height($(window).height());
-            $(document).ready(function() {
+            $("#main_body").ready(function() {
                 $('#fullpage').fullpage({
                     resize: true,
                     //Navigation
@@ -239,7 +239,7 @@ var loader = new resLoader({
                     //Accessibility
                     keyboardScrolling: true,
                     animateAnchor: true,
-                    recordHistory: true,
+                    recordHistory: false,
 
                     //Design
                     // controlArrows: true,
@@ -254,7 +254,7 @@ var loader = new resLoader({
 
                     //Custom selectors
                     sectionSelector: '.page',
-                    slideSelector: '.page > .slide',
+                    slideSelector: '.page .slide',
 
                     //events
                     // onLeave: function(index, nextIndex, direction) {},
