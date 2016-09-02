@@ -195,8 +195,7 @@ var loader = new resLoader({
         var lp = 50 - percent / 2.0,
             rp = 50 + percent / 2.0;
         var bar_width = $("#progress").width() * percent / 100.0;
-        console.log(bar_width);
-        console.log()
+        // console.log(bar_width);
         $('#progressbar').css({
             'left': lp + '%',
             'width': bar_width + "px"
@@ -264,8 +263,9 @@ var loader = new resLoader({
                 // afterLoad: function(anchorLink, index) {},
                 afterRender: function() {
                     $(".fp-controlArrow").remove();
-                    console.log($("#works .fp-slidesNav"));
+                    // console.log($("#works .fp-slidesNav"));
                     $("#works .fp-slidesNav").css('visibility', 'hidden');
+                    $("#events .fp-slidesNav").css('visibility', 'hidden');
                     // $(".fp-slidesNav ul li a span").css('background-color', '#BFBFBF');
                     // $(".fp-slidesNav ul li a.active span").css('background-color', 'rgb(0, 255, 184)');
                     // $(".fp-slidesNav ul li a:hover span").css('background-color', '#fff');

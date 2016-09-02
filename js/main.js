@@ -59,6 +59,11 @@ $(window).resize(function() {
 		navbar_draw();
 	});
 	$("#main_body").move_bg();
+	// var $event_canvas = $("#event-can"),
+	$screenW = $(window).width();
+	$screenH = $(window).height();
+	$("#events #event-years #yearLabels .yearLabel").remove();
+	drawYears();
 	// var $w = $(window).width();
 	// if ($w <= 650) {
 	// 	$("body").css({
