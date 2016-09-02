@@ -165,17 +165,26 @@ function introStuff() {
     //暴露公共方法
     return resLoader;
 }));
-
+// 'js/jquery.fullPage.js',
+// 'js/main.js',
+// 'js/navbar.js',
 //init progress bar
 var loader = new resLoader({
     resources: [
-        '../js/jquery.fullPage.js',
-        '../js/main.js',
-        '../js/navbar.js',
-        '../src/pic/intropage/1-Assistor.png',
-        '../src/pic/intropage/2-Assistor.png',
-        '../src/pic/intropage/3-Assistor.png',
-        '../src/pic/BG.png',
+        'css/main.min.css',
+        'css/jquery.fullPage.css',
+        'src/pic/BG.png',
+        'src/pic/homepage/android-Assistor.png',
+        'src/pic/homepage/come-Assistor.png',
+        'src/pic/homepage/Design-Assistor.png',
+        'src/pic/homepage/iOS-Assistor.png',
+        'src/pic/homepage/game-Assistor.png',
+        'src/pic/homepage/Lab-Assistor.png',
+        'src/pic/homepage/nomove.png',
+        'src/pic/homepage/PM-Assistor.png',
+        'src/pic/homepage/Web-Assistor.png',
+        'src/pic/homepage/home-heading.png',
+        'src/pic/homepage/uniquelogo.png',
     ],
     onStart: function(total) {
         console.log('start:' + total);
@@ -197,86 +206,102 @@ var loader = new resLoader({
         // $('.progresstext .total').text(total);
     },
     onComplete: function() {
+        $("#main_body").ready(function() {
+            $('#fullpage').fullpage({
+                resize: true,
+                //Navigation
+                menu: '#navbar_menu',
+                anchors: ['home_page', 'intro_page', 'groups_page', 'events_page', 'works_page', 'contact_page'],
+                // navigation: false,
+                // navigationPosition: 'right',
+                // navigationTooltips: ['firstSlide', 'secondSlide'],
+                // showActiveTooltip: false,
+                slidesNavigation: true,
+                slidesNavPosition: 'bottom',
+
+                //Scrolling
+                css3: true,
+                scrollingSpeed: 700,
+                autoScrolling: true,
+                fitToSection: true,
+                fitToSectionDelay: 1000,
+                scrollBar: false,
+                easing: 'easeInOutCubic',
+                easingcss3: 'ease',
+                loopBottom: false,
+                loopTop: false,
+                loopHorizontal: true,
+                continuousVertical: false,
+                // normalScrollElements: '#element1, .element2',
+                // scrollOverflow: false,
+                // scrollOverflowOptions: null,
+                touchSensitivity: 15,
+                // normalScrollElementTouchThreshold: 5,
+                // bigSectionsDestination: null,
+
+                //Accessibility
+                keyboardScrolling: true,
+                animateAnchor: true,
+                recordHistory: false,
+
+                //Design
+                // controlArrows: true,
+                // slideControlArrows: false,
+                verticalCentered: true,
+                // sectionsColor: ['#ccc', '#fff'],
+                // paddingTop: '3em',
+                // paddingBottom: '10px',
+                fixedElements: '#navbar',
+                // responsiveWidth: 0,
+                // responsiveHeight: 0,
+
+                //Custom selectors
+                sectionSelector: '.page',
+                slideSelector: '.page .slide',
+
+                //events
+                // onLeave: function(index, nextIndex, direction) {},
+                // afterLoad: function(anchorLink, index) {},
+                afterRender: function() {
+                    $(".fp-controlArrow").remove();
+                    console.log($("#works .fp-slidesNav"));
+                    $("#works .fp-slidesNav").css('visibility', 'hidden');
+                    // $(".fp-slidesNav ul li a span").css('background-color', '#BFBFBF');
+                    // $(".fp-slidesNav ul li a.active span").css('background-color', 'rgb(0, 255, 184)');
+                    // $(".fp-slidesNav ul li a:hover span").css('background-color', '#fff');
+                    $("#home #home_join").click(function(event) {
+                        /* Act on the event */
+                        $.fn.fullpage.moveTo('contact_page');
+                    });
+
+                },
+                // afterResize: function() {},
+                // afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {},
+                // onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex) {}
+            });
+
+            $("#main_body").move_bg();
+            $('#navbar_btn').click(function(event) {
+                /* Act on the event */
+                $("#navbar_menu li").css('display', 'inline-block');;
+            });
+        });
+        $("#main_body").css('display', 'block');
         $(".pre_body_arrow").animate({
             "opacity": 1,
-        }, 600).click(function() { /* Act on the event */
-            $("#pre_body").fadeOut("400").remove();
-            $("#main_body").css('display', 'block');
-            $(".page").height($(window).height());
-            $("#main_body").ready(function() {
-                $('#fullpage').fullpage({
-                    resize: true,
-                    //Navigation
-                    menu: '#navbar_menu',
-                    anchors: ['home_page', 'intro_page', 'groups_page', 'events_page', 'works_page', 'contact_page'],
-                    // navigation: false,
-                    // navigationPosition: 'right',
-                    // navigationTooltips: ['firstSlide', 'secondSlide'],
-                    // showActiveTooltip: false,
-                    slidesNavigation: true,
-                    slidesNavPosition: 'bottom',
-
-                    //Scrolling
-                    css3: true,
-                    scrollingSpeed: 700,
-                    autoScrolling: true,
-                    fitToSection: true,
-                    fitToSectionDelay: 1000,
-                    scrollBar: false,
-                    easing: 'easeInOutCubic',
-                    easingcss3: 'ease',
-                    loopBottom: false,
-                    loopTop: false,
-                    loopHorizontal: true,
-                    continuousVertical: false,
-                    // normalScrollElements: '#element1, .element2',
-                    // scrollOverflow: false,
-                    // scrollOverflowOptions: null,
-                    touchSensitivity: 15,
-                    // normalScrollElementTouchThreshold: 5,
-                    // bigSectionsDestination: null,
-
-                    //Accessibility
-                    keyboardScrolling: true,
-                    animateAnchor: true,
-                    recordHistory: false,
-
-                    //Design
-                    // controlArrows: true,
-                    // slideControlArrows: false,
-                    verticalCentered: true,
-                    // sectionsColor: ['#ccc', '#fff'],
-                    // paddingTop: '3em',
-                    // paddingBottom: '10px',
-                    fixedElements: '#navbar',
-                    // responsiveWidth: 0,
-                    // responsiveHeight: 0,
-
-                    //Custom selectors
-                    sectionSelector: '.page',
-                    slideSelector: '.page .slide',
-
-                    //events
-                    // onLeave: function(index, nextIndex, direction) {},
-                    // afterLoad: function(anchorLink, index) {},
-                    afterRender: function() {
-                        $(".fp-controlArrow").remove();
-                        // $(".fp-slidesNav ul li a span").css('background-color', '#BFBFBF');
-                        // $(".fp-slidesNav ul li a.active span").css('background-color', 'rgb(0, 255, 184)');
-                        // $(".fp-slidesNav ul li a:hover span").css('background-color', '#fff');
-
-                    },
-                    // afterResize: function() {},
-                    // afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {},
-                    // onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex) {}
-                });
-
-                $("#main_body").move_bg();
-                $('#navbar_btn').click(function(event) {
-                    /* Act on the event */
-                    $("#navbar_menu li").css('display', 'inline-block');;
-                });
+        }, 200).click(function() { /* Act on the event */
+            $.fn.fullpage.silentMoveTo('home_page');
+            $("#pre_body").css({
+                "transform": "scale3d(0.1,0.1,0.1)",
+                // "transform": "",
+                // "background-color": "red",
             });
+
+            var timer = setTimeout(function() {
+                $("#pre_body").remove();
+            }, 250);
+            // $(".page").height($(window).height());
+
         });
     }
 });
