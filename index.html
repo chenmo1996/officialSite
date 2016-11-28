@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>unique studio</title>
+    <title>Unique Studio</title>
+    <link rel="icon" href="static/favicon.ico" type="image/x-icon">
+    <meta http-equiv="Content-Language" content="zh-cn" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -12,18 +14,9 @@
     <meta http-equiv="cache-control" content="no-cache">
     <meta name="discription" content="联创队团是华中科技大学由学生自发组织自主实践自行运营的IT团队">
     <meta name="discription" content="联创团队网站提供了团队的所有基本信息，包括团队简介，团队作品，团队招新和联系方式">
-    <!-- <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/pre_body.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/homepage.css">
-    <link rel="stylesheet" href="css/main_body.css">
-    <link rel="stylesheet" href="css/intropage.css"> -->
-    <link rel="stylesheet" href="css/main.min.css">
-    <!-- <link rel="stylesheet" href="css/pagechange.css"> -->
-    <link rel="stylesheet" href="css/jquery.fullPage.css">
-    <!-- <script src="https://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script> -->
-    <script src="js/jquery-3.1.0.min.js"></script>
-    <!-- <script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script> -->
+    <meta name="author" content="Designed By Jihao Xu, Programed By Guojin Chen">
+    <link rel="stylesheet" href="static/css/main.min.css">
+    <script src="static/js/jquery-3.1.0.min.js"></script>
 </head>
 
 <body>
@@ -490,51 +483,30 @@
                     </g>
                 </g>
             </svg>
-            <div class="hover-blocks clearfix">
-                <span class="hover-block u-1" data-color="#ff6f35" data-letter="u-1"></span>
-                <span class="hover-block n" data-color="#ffb22d" data-letter="n"></span>
-                <span class="hover-block i" data-color="#f7df00" data-letter="i"></span>
-                <span class="hover-block q" data-color="#8b3cff" data-letter="q"></span>
-                <span class="hover-block u-2" data-color="#26ff6c" data-letter="u-2"></span>
-                <span class="hover-block e" data-color="#268bff" data-letter="e"></span>
-                <!-- <span class="hover-block l" data-color="" data-letter="l"></span> -->
-            </div>
+            <div class="hover-blocks clearfix"><span class="hover-block u-1" data-color="#ff6f35" data-letter="u-1"></span><span class="hover-block n" data-color="#ffb22d" data-letter="n"></span><span class="hover-block i" data-color="#f7df00" data-letter="i"></span><span class="hover-block q" data-color="#8b3cff" data-letter="q"></span><span class="hover-block u-2" data-color="#26ff6c" data-letter="u-2"></span><span class="hover-block e" data-color="#268bff" data-letter="e"></span></div>
         </div>
         <div id="progress">
             <div id="progressbar"></div>
         </div>
-        <div class="pre_body_arrow">
-        </div>
-        <script src="js/pre_body.js"></script>
+        <div class="pre_body_arrow"></div>
+        <script src="static/js/pre_body.min.js"></script>
     </section>
     <section id="main_body">
-        <!-- nav bar -->
         <div id="navbar" class="clearfix">
             <a href="#home_page">
-                <div id="navbar_logo">
-                </div>
+                <div id="navbar_logo"></div>
             </a>
+            <div class="navflex"></div>
             <div id="navbar_menu">
                 <li data-menuanchor="home_page"><a href="#home_page">首页</a></li>
                 <li data-menuanchor="intro_page"><a href="#intro_page">简介</a></li>
                 <li data-menuanchor="groups_page"><a href="#groups_page">组别</a></li>
                 <li data-menuanchor="events_page"><a href="#events_page">大事记</a></li>
                 <li data-menuanchor="works_page"><a href="#works_page">作品</a></li>
-                <li data-menuanchor="contact_page"><a href="#contact_page" id="joinBtn"><span>加入/联系</span></a></li>
-                <span id="navbar_btn">
-                    <canvas id="canvas" width="28px" height="28px">
-                        当前浏览器不支持Canvas，请下载最新的浏览器！
-                    </canvas>
-                </span>
-            </div>
+                <li data-menuanchor="contact_page"><a href="#contact_page" id="joinBtn"><span>加入/联系</span></a></li><span id="navbar_btn"><canvas id="canvas" width="44px" height="44px">当前浏览器不支持Canvas，请下载最新的浏览器！</canvas></span></div>
         </div>
-        <script src="js/navbar.js"></script>
-        <!-- navbar end -->
-        <!-- fullpage bg -->
         <div id="fullpage">
-            <!-- home page begin -->
             <div data-anchor="home_page" class="page" id="home">
-                <div id="welcome"><img src="src/pic/homepage/home-heading.png" alt=""></div>
                 <div class="home_group" id="home_apple">
                     <div class="home_tag"></div>
                 </div>
@@ -559,532 +531,393 @@
                 <div class="home_group" id="home_join">
                     <div class="home_tag"></div>
                 </div>
+                <canvas id="home_can">您的浏览器不支持HTML5，请更换浏览器。</canvas>
             </div>
-            <!-- home page end -->
-            <!-- intro_page bg -->
             <div data-anchor="intro_page" class="page" id="intro">
-                <div class="slide">
-                    <img src="src/pic/intropage/1.jpg" alt="unique1">
+                <div class="slide"><img class="lazy" data-original="static/src/pic/intropage/1.jpg" alt="unique1">
                     <h1>1</h1>
-                    <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp联创团队（Unique Studio）创建于2000年6月。团队秉承不断创新的核心精神，怀揣对技术的无限热忱，努力打造一个以技术为驱动，多元发展的精英学生组织。团队立足信息技术，通过承担科研项目，参加科技大赛，孕育创新产品等形式激发队员的无限激情和潜能，并积极整合历届队员的优势和资源，共同创造团队和个人的未来。
-                    </p>
+                    <p>联创团队（Unique-Studio）创建于2000年6月。团队秉承不断创新的核心精神，怀揣对技术的无限热忱，努力打造一个以技术为驱动，多元发展的精英学生组织。团队立足信息技术，通过承担科研项目，参加科技大赛，孕育创新产品等形式激发队员的无限激情和潜能，并积极整合历届队员的优势和资源，共同创造团队和个人的未来。</p>
                 </div>
-                <div class="slide">
-                    <img src="src/pic/intropage/2.jpg" alt="unique2">
+                <div class="slide"><img class="lazy" data-original="static/src/pic/intropage/2.jpg" alt="unique2">
                     <h1>2</h1>
-                    <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp作为一个以兴趣为主导、强调主动实践和自主创新，由学生自发组织、自我管理的学生团队, 团队致力于为有潜力、肯努力、富有激情的学生构建一流的学习环境，引导他们快速成长。目前团队已经取得了优异的成绩成为华中科技大学大学生主动实践获得成功的典范之一。团队积极参加国际高水平的科技创新大赛，尤其是在微软创新杯(Imagine Cup)全球学生大赛中， 连续5年闯进总决赛并代表中国大学生在世界大学生科技竞赛的舞台上崭露头角。
-                    </p>
+                    <p>作为一个以兴趣为主导、强调主动实践和自主创新，由学生自发组织、自我管理的学生团队，团队致力于为有潜力、肯努力、富有激情的学生构建一流的学习环境，引导他们快速成长。目前团队已经取得了优异的成绩成为华中科技大学大学生主动实践获得成功的典范之一。团队积极参加国际高水平的科技创新大赛，尤其是在微软创新杯(Imagine-Cup)全球学生大赛中，连续5年闯进总决赛并代表中国大学生在世界大学生科技竞赛的舞台上崭露头角。</p>
                 </div>
-                <div class="slide">
-                    <img src="src/pic/intropage/3.jpg" alt="unique3">
+                <div class="slide"><img class="lazy" data-original="static/src/pic/intropage/3.jpg" alt="unique3">
                     <h1>3</h1>
-                    <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp近年来，团队大力推广校园极客文化，努力把创新活动与IT产业相结合。团队连续三年举办了Unique Hack Day校园黑客马拉松大赛，通过Unique Hack Day，连接起了当今最有想法的年轻人，努力让极客文化传播得更广。与此同时，团队成员在校期间努力创新，推出了众多产品。离校后，团队成员积极投身创业浪潮，成功孵化出了百纳信息技术有限公司等企业。联创团队着力打造新的联创平台，为把更多更好的学生带向自主创新之路而不懈努力。</p>
+                    <p>近年来，团队大力推广校园极客文化，努力把创新活动与IT产业相结合。团队连续三年举办了Unique-Hack-Day校园黑客马拉松大赛，通过Unique-Hack-Day，连接起了当今最有想法的年轻人，努力让极客文化传播得更广。与此同时，团队成员在校期间努力创新，推出了众多产品。离校后，团队成员积极投身创业浪潮，成功孵化出了百纳信息技术有限公司等企业。联创团队着力打造新的联创平台，为把更多更好的学生带向自主创新之路而不懈努力。</p>
                 </div>
             </div>
-            <!-- intro_page end -->
-            <!-- groups_page bg -->
             <div data-anchor="groups_page" class="page" id="groups">
-                <!-- web -->
-                <div class="slide">
-                    <img src="src/pic/groupspage/web - Assistor.png" alt="web">
+                <div class="slide"><img class="lazy" data-original="static/src/pic/groupspage/web - Assistor.png" alt="web">
                     <h1>Web</h1>
-                    <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeb组以通过互联网丰富生活为主要目的，时刻与最新的趋势保持同步。浏览器是我们的世界，在这里我们可以尽情地毁灭和创造。主要方向：网站开发、Web App开发、浏览器插件开发、微信公众平台开发。
-                    </p>
+                    <p>Web组以通过互联网丰富生活为主要目的，时刻与最新的趋势保持同步。浏览器是我们的世界，在这里我们可以尽情地毁灭和创造。主要方向：网站开发、WebApp开发、浏览器插件开发、微信公众平台开发。</p>
                 </div>
-                <!-- Unique Lab -->
-                <div class="slide">
-                    <img src="src/pic/groupspage/lab - Assistor.png" alt="lab">
-                    <h1>Unique Lab</h1>
-                    <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspLab组是Geek们的聚集地。我们探索各领域的算法，捣鼓智能硬件和系统级开发，有时焊焊芯片，服务器运维是我们的拿手好戏。我们致力于编写高性能的代码，热衷于处理海量的数据。
-                    </p>
+                <div class="slide"><img class="lazy" data-original="static/src/pic/groupspage/lab - Assistor.png" alt="lab">
+                    <h1>Unique-Lab</h1>
+                    <p>Lab组是Geek们的聚集地。我们探索各领域的算法，捣鼓智能硬件和系统级开发，有时焊焊芯片，服务器运维是我们的拿手好戏。我们致力于编写高性能的代码，热衷于处理海量的数据。</p>
                 </div>
-                <!-- Design -->
-                <div class="slide">
-                    <img src="src/pic/groupspage/design - Assistor.png" alt="Design">
+                <div class="slide"><img class="lazy" data-original="static/src/pic/groupspage/design - Assistor.png" alt="Design">
                     <h1>Design</h1>
-                    <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDesign组主要进行各个平台软件、网页及WebApp的界面和交互设计，也会进行游戏设计和视频制作。我们并非美工而是设计师，在这里你可以做任何发挥艺术天赋，并借由技术和互联网闪耀光芒的设计。
-                    </p>
+                    <p>Design组主要进行各个平台软件、网页及WebApp的界面和交互设计，也会进行游戏设计和视频制作。我们并非美工而是设计师，在这里你可以做任何发挥艺术天赋，并借由技术和互联网闪耀光芒的设计。</p>
                 </div>
-                <!-- PM -->
-                <div class="slide">
-                    <img src="src/pic/groupspage/pm - Assistor.png" alt="PM">
+                <div class="slide"><img class="lazy" data-original="static/src/pic/groupspage/pm - Assistor.png" alt="PM">
                     <h1>PM</h1>
-                    <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPM组是用户与开发技术人员之间沟通的桥梁，它以开发出能够满足用户需求的高质量的应用服务为目标；在产品的开发过程中致力于对产品功能、UI等方面的诠释，将创新的想法与前沿的技术结合起来并应用到实践中。
-                    </p>
+                    <p>PM组是用户与开发技术人员之间沟通的桥梁，它以开发出能够满足用户需求的高质量的应用服务为目标；在产品的开发过程中致力于对产品功能、UI等方面的诠释，将创新的想法与前沿的技术结合起来并应用到实践中。</p>
                 </div>
-                <!-- Android -->
-                <div class="slide">
-                    <img src="src/pic/groupspage/android - Assistor.png" alt="Android" class="g-special">
+                <div class="slide group_small"><img class="lazy" data-original="static/src/pic/groupspage/android - Assistor.png" alt="Android" class="g-special">
                     <h1>Android</h1>
-                    <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAndroid组是基于Android系统以实现创意、探索技术为目的的小组，无论是在本地化功能型应用方向，还是基于大数据的客户端，都保持领先的技术水平和辉煌的战果。主要方向：手机游戏开发、功能型App开发、移动互联网应用及插件开发。
-                    </p>
+                    <p>Android组是基于Android系统以实现创意、探索技术为目的的小组，无论是在本地化功能型应用方向，还是基于大数据的客户端，都保持领先的技术水平和辉煌的战果。主要方向：手机游戏开发、功能型App开发、移动互联网应用及插件开发。</p>
                 </div>
-                <!-- IOS -->
-                <div class="slide">
-                    <img src="src/pic/groupspage/ios - Assistor.png" alt="IOS" class="g-special">
-                    <h1>IOS</h1>
-                    <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我们基于iOS系统展现创意和技术。无论是小而美的创意类应用，还是大型的客户端构建都是我们涉足的领域。在这里，你能优雅地通过技术为平凡生活增添光彩，得到自我提升。Stay Hungry, Stay Foolish.不断进步，锐意创新。
-                    </p>
+                <div class="slide group_small"><img class="lazy" data-original="static/src/pic/groupspage/ios - Assistor.png" alt="IOS" class="g-special">
+                    <h1>iOS</h1>
+                    <p>我们基于iOS系统展现创意和技术。无论是小而美的创意类应用，还是大型的客户端构建都是我们涉足的领域。在这里，你能优雅地通过技术为平凡生活增添光彩，得到自我提升。StayHungry，StayFoolish.不断进步，锐意创新。</p>
                 </div>
-                <!-- Game -->
-                <div class="slide">
-                    <img src="src/pic/groupspage/game pic - Assistor.png" alt="Game">
+                <div class="slide"><img class="lazy" data-original="static/src/pic/groupspage/game pic - Assistor.png" alt="Game">
                     <h1>Game</h1>
-                    <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGame组热衷于设计并创造游戏，探索并研究底层技术。我们在图形学和游戏人工智能等领域施展拳脚，致力于游戏开发的每个阶段。引擎是我们创造世界的工具，策划是我们描绘世界的蓝图。在这里，你能尽情制造快乐，收获快乐，享受快乐。
-                    </p>
+                    <p>Game组热衷于设计并创造游戏，探索并研究底层技术。我们在图形学和游戏人工智能等领域施展拳脚，致力于游戏开发的每个阶段。引擎是我们创造世界的工具，策划是我们描绘世界的蓝图。在这里，你能尽情制造快乐，收获快乐，享受快乐。</p>
                 </div>
             </div>
-            <!-- groups_page end -->
-            <!-- events_page bg -->
             <div data-anchor="events_page" class="page" id="events">
                 <div id="event-years">
-                    <canvas id="event-can">
-                        您的浏览器不支持HTML5，请更换浏览器。
-                    </canvas>
-                    <div id="yearLabels">
-                        <!-- <div class="yearLabel">2000</div>
-                        <div class="yearLabel">2004</div>
-                        <div class="yearLabel">2005</div>
-                        <div class="yearLabel">2006</div>
-                        <div class="yearLabel">2007</div>
-                        <div class="yearLabel">2008</div>
-                        <div class="yearLabel">2009</div>
-                        <div class="yearLabel">2010</div>
-                        <div class="yearLabel">2011</div>
-                        <div class="yearLabel">2012</div>
-                        <div class="yearLabel">2013</div>
-                        <div class="yearLabel">2014</div>
-                        <div class="yearLabel">2015</div>
-                        <div class="yearLabel">2016</div> -->
-                    </div>
+                    <canvas id="event-can">您的浏览器不支持HTML5，请更换浏览器。</canvas>
+                    <div id="yearLabels"></div>
                 </div>
-                <div id="event-details">
+                <div id="event-details"><span class="triangle">◀</span>
                     <div class="slide">
-                        <img src="src/pic/groupspage/web - Assistor.png" alt="web">
-                        <h1>Web</h1>
-                        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeb组以通过互联网丰富生活为主要目的，时刻与最新的趋势保持同步。浏览器是我们的世界，在这里我们可以尽情地毁灭和创造。主要方向：网站开发、Web App开发、浏览器插件开发、微信公众平台开发。
-                        </p>
+                        <div class="events_text">
+                            <h1>2000</h1>
+                            <p>华中科技大学机械学院98级的13名学生创立了联创工作室</p>
+                        </div>
                     </div>
                     <div class="slide">
-                        <img src="src/pic/groupspage/web - Assistor.png" alt="web">
-                        <h1>Web</h1>
-                        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeb组以通过互联网丰富生活为主要目的，时刻与最新的趋势保持同步。浏览器是我们的世界，在这里我们可以尽情地毁灭和创造。主要方向：网站开发、Web App开发、浏览器插件开发、微信公众平台开发。
-                        </p>
+                        <div class="events_text">
+                            <h1>2004</h1>
+                            <p>趋势科技全国百万程序大赛团体第四名</p>
+                        </div>
                     </div>
                     <div class="slide">
-                        <img src="src/pic/groupspage/web - Assistor.png" alt="web">
-                        <h1>Web</h1>
-                        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeb组以通过互联网丰富生活为主要目的，时刻与最新的趋势保持同步。浏览器是我们的世界，在这里我们可以尽情地毁灭和创造。主要方向：网站开发、Web App开发、浏览器插件开发、微信公众平台开发。
-                        </p>
+                        <div class="events_text">
+                            <h1>2005</h1>
+                            <p>微软创新杯Office-Designer第三名</p>
+                        </div>
                     </div>
                     <div class="slide">
-                        <img src="src/pic/groupspage/web - Assistor.png" alt="web">
-                        <h1>Web</h1>
-                        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeb组以通过互联网丰富生活为主要目的，时刻与最新的趋势保持同步。浏览器是我们的世界，在这里我们可以尽情地毁灭和创造。主要方向：网站开发、Web App开发、浏览器插件开发、微信公众平台开发。
-                        </p>
+                        <div class="events_text">
+                            <h1>2006</h1>
+                            <p>微软创新杯visual-game全球第五名</p>
+                        </div>
                     </div>
                     <div class="slide">
-                        <img src="src/pic/groupspage/web - Assistor.png" alt="web">
-                        <h1>Web</h1>
-                        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeb组以通过互联网丰富生活为主要目的，时刻与最新的趋势保持同步。浏览器是我们的世界，在这里我们可以尽情地毁灭和创造。主要方向：网站开发、Web App开发、浏览器插件开发、微信公众平台开发。
-                        </p>
+                        <div class="events_text">
+                            <h1>2007</h1>
+                            <p>韩国首尔微软创新杯IT组全球第一名</p>
+                        </div>
                     </div>
                     <div class="slide">
-                        <img src="src/pic/groupspage/web - Assistor.png" alt="web">
-                        <h1>Web</h1>
-                        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeb组以通过互联网丰富生活为主要目的，时刻与最新的趋势保持同步。浏览器是我们的世界，在这里我们可以尽情地毁灭和创造。主要方向：网站开发、Web App开发、浏览器插件开发、微信公众平台开发。
-                        </p>
+                        <div class="events_text">
+                            <h1>2007</h1>
+                            <p>微软创新杯2007软件设计项目中国赛区第一，比尔盖茨亲自颁奖</p>
+                        </div>
                     </div>
                     <div class="slide">
-                        <img src="src/pic/groupspage/web - Assistor.png" alt="web">
-                        <h1>Web</h1>
-                        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeb组以通过互联网丰富生活为主要目的，时刻与最新的趋势保持同步。浏览器是我们的世界，在这里我们可以尽情地毁灭和创造。主要方向：网站开发、Web App开发、浏览器插件开发、微信公众平台开发。
-                        </p>
+                        <div class="events_text">
+                            <h1>2008</h1>
+                            <p>法国巴黎微软创新杯IT组全球第三名</p>
+                        </div>
                     </div>
                     <div class="slide">
-                        <img src="src/pic/groupspage/web - Assistor.png" alt="web">
-                        <h1>Web</h1>
-                        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeb组以通过互联网丰富生活为主要目的，时刻与最新的趋势保持同步。浏览器是我们的世界，在这里我们可以尽情地毁灭和创造。主要方向：网站开发、Web App开发、浏览器插件开发、微信公众平台开发。
-                        </p>
+                        <div class="events_text">
+                            <h1>2008</h1>
+                            <p>软件设计组全球第六名</p>
+                        </div>
                     </div>
                     <div class="slide">
-                        <img src="src/pic/groupspage/web - Assistor.png" alt="web">
-                        <h1>Web</h1>
-                        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeb组以通过互联网丰富生活为主要目的，时刻与最新的趋势保持同步。浏览器是我们的世界，在这里我们可以尽情地毁灭和创造。主要方向：网站开发、Web App开发、浏览器插件开发、微信公众平台开发。
-                        </p>
+                        <div class="events_text">
+                            <h1>2009</h1>
+                            <p>埃及开罗微软创新杯2009IT挑战项目全球第二名</p>
+                        </div>
                     </div>
                     <div class="slide">
-                        <img src="src/pic/groupspage/web - Assistor.png" alt="web">
-                        <h1>Web</h1>
-                        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeb组以通过互联网丰富生活为主要目的，时刻与最新的趋势保持同步。浏览器是我们的世界，在这里我们可以尽情地毁灭和创造。主要方向：网站开发、Web App开发、浏览器插件开发、微信公众平台开发。
-                        </p>
+                        <div class="events_text">
+                            <h1>2009</h1>
+                            <p>软件项目无限潜力开发设计</p>
+                        </div>
                     </div>
                     <div class="slide">
-                        <img src="src/pic/groupspage/web - Assistor.png" alt="web">
-                        <h1>Web</h1>
-                        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeb组以通过互联网丰富生活为主要目的，时刻与最新的趋势保持同步。浏览器是我们的世界，在这里我们可以尽情地毁灭和创造。主要方向：网站开发、Web App开发、浏览器插件开发、微信公众平台开发。
-                        </p>
+                        <div class="events_text">
+                            <h1>2010</h1>
+                            <p>波兰华沙，微软创新杯2010，在Challenge项目获得中获得全球冠军。</p>
+                        </div>
                     </div>
                     <div class="slide">
-                        <img src="src/pic/groupspage/web - Assistor.png" alt="web">
-                        <h1>Web</h1>
-                        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeb组以通过互联网丰富生活为主要目的，时刻与最新的趋势保持同步。浏览器是我们的世界，在这里我们可以尽情地毁灭和创造。主要方向：网站开发、Web App开发、浏览器插件开发、微信公众平台开发。
-                        </p>
+                        <div class="events_text">
+                            <h1>2011</h1>
+                            <p>美国纽约微软创新杯IT组全球第六名</p>
+                        </div>
                     </div>
                     <div class="slide">
-                        <img src="src/pic/groupspage/web - Assistor.png" alt="web">
-                        <h1>Web</h1>
-                        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeb组以通过互联网丰富生活为主要目的，时刻与最新的趋势保持同步。浏览器是我们的世界，在这里我们可以尽情地毁灭和创造。主要方向：网站开发、Web App开发、浏览器插件开发、微信公众平台开发。
-                        </p>
+                        <div class="events_text">
+                            <h1>2011</h1>
+                            <p>软件设计项目中国赛区第一</p>
+                        </div>
                     </div>
                     <div class="slide">
-                        <img src="src/pic/groupspage/web - Assistor.png" alt="web">
-                        <h1>Web</h1>
-                        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWeb组以通过互联网丰富生活为主要目的，时刻与最新的趋势保持同步。浏览器是我们的世界，在这里我们可以尽情地毁灭和创造。主要方向：网站开发、Web App开发、浏览器插件开发、微信公众平台开发。
-                        </p>
+                        <div class="events_text">
+                            <h1>2012</h1>
+                            <p>腾讯html5创新大赛全国冠军</p>
+                        </div>
                     </div>
+                    <div class="slide">
+                        <div class="events_text">
+                            <h1>2012</h1>
+                            <p>手机防盗软件“Within”在Google第三届 Android挑战赛中获得全国二等奖</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="events_text">
+                            <h1>2013</h1>
+                            <p>微信公众平台创新大赛全国铜奖</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="events_text">
+                            <h1>2014</h1>
+                            <p>第一届全国高校软件定义网络（SDN）应用创新开发大赛三等奖&最佳潜力奖</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="events_text">
+                            <h1>2014</h1>
+                            <p>举办第二届Unique-Hack-Day（校园黑客马拉松）大赛，超过150位来自全国各地的高校大学生参赛</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="events_text">
+                            <h1>2014</h1>
+                            <p>360全国大学生信息安全大赛团队总分全国第三名。</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="events_text">
+                            <h1>2015</h1>
+                            <p>联创团队十五周年，举办第三届Unique-Hack-Day（校园黑客马拉松）大赛，吸引全国150余名参赛者，规模空前。 </p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="events_text">
+                            <h1>2015</h1>
+                            <p>第二届#阿里巴巴安全技术大赛#冠军（团队成员）</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="events_text">
+                            <h1>2016</h1>
+                            <p>2016世界大学生超级计算机竞赛全球第一名</p>
+                        </div>
+                    </div>
+                    <div class="imgContent"><img class="lazy2" data-original="static/src/pic/eventspage/2000.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2004.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2005.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2006.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2007.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2007-2.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2008.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2008-2.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2009.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2009-2.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2010.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2011.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2011-2.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2012.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2012-2.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2013.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2014 1.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2014 2.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2014 3.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2015 1.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2015 2.jpg" alt="welcome to unique-studio" style="font-size:12px"><img class="lazy2" data-original="static/src/pic/eventspage/2016.jpg" alt="welcome to unique-studio" style="font-size:12px"></div>
                 </div>
             </div>
-            <!-- events_page end -->
-            <!-- works page bg -->
             <div data-anchor="works_page" class="page" id="works">
-                <!-- <a href="test.html">这是一个测试</a> -->
-                <!-- <main> -->
+                <div class="controlarrows">
+                    <div class="leftarrow"></div>
+                    <div class="rightarrow"></div>
+                </div>
                 <div class="worksCtn clearfix">
-                    <div class="work_view">
-                        <img src="src/pic/workspage/havebook - Assistor.png" alt="works-logo">
+                    <div class="work_view" data-slide="0"><img class="lazy" data-original="static/src/pic/workspage/shangtian-Assi.png" alt="works-logo">
+                        <h3>上天</h3>
+                        <div class="work-mask"></div>
+                    </div>
+                    <div class="work_view" data-slide="1"><img class="lazy" data-original="static/src/pic/workspage/picread-assi.png" alt="works-logo">
+                        <h3>picRead</h3>
+                        <div class="work-mask"></div>
+                    </div>
+                    <div class="work_view" data-slide="2"><img class="lazy" data-original="static/src/pic/workspage/yiji - Assistor.png" alt="works-logo">
+                        <h3>壹日壹记</h3>
+                        <div class="work-mask"></div>
+                    </div>
+                    <div class="work_view" data-slide="3"><img class="lazy" data-original="static/src/pic/workspage/havebook - Assistor.png" alt="works-logo">
                         <h3>有书</h3>
                         <div class="work-mask"></div>
                     </div>
-                    <div class="work_view">
-                        <img src="src/pic/workspage/havebook - Assistor.png" alt="works-logo">
-                        <h3>有书</h3>
+                    <div class="work_view" data-slide="4"><img class="lazy" data-original="static/src/pic/workspage/eaco - Assistor.png" alt="works-logo">
+                        <h3>eaco</h3>
                         <div class="work-mask"></div>
                     </div>
-                    <div class="work_view">
-                        <img src="src/pic/workspage/havebook - Assistor.png" alt="works-logo">
-                        <h3>有书</h3>
+                    <div class="work_view" data-slide="5"><img class="lazy" data-original="static/src/pic/workspage/fuubo - Assistor.png" alt="works-logo">
+                        <h3>fuubo</h3>
                         <div class="work-mask"></div>
                     </div>
-                    <div class="work_view">
-                        <img src="src/pic/workspage/havebook - Assistor.png" alt="works-logo">
-                        <h3>有书</h3>
+                    <div class="work_view" data-slide="6"><img class="lazy" data-original="static/src/pic/workspage/Gamee - Assistor.png" alt="works-logo">
+                        <h3>Gamee</h3>
                         <div class="work-mask"></div>
                     </div>
-                    <div class="work_view">
-                        <img src="src/pic/workspage/havebook - Assistor.png" alt="works-logo">
-                        <h3>有书</h3>
+                    <div class="work_view" data-slide="7"><img class="lazy" data-original="static/src/pic/workspage/helper - Assistor.png" alt="works-logo">
+                        <h3>小助手</h3>
                         <div class="work-mask"></div>
                     </div>
-                    <div class="work_view" data-slide=5>
-                        <img src="src/pic/workspage/havebook - Assistor.png" alt="works-logo">
-                        <h3>有书</h3>
+                    <div class="work_view" data-slide="8"><img class="lazy" data-original="static/src/pic/workspage/hustmap - Assistor.png" alt="works-logo">
+                        <h3>华科街景地图</h3>
                         <div class="work-mask"></div>
                     </div>
-                    <div class="work_view">
-                        <img src="src/pic/workspage/havebook - Assistor.png" alt="works-logo">
-                        <h3>有书</h3>
+                    <div class="work_view" data-slide="9"><img class="lazy" data-original="static/src/pic/workspage/jianxun - Assistor.png" alt="works-logo">
+                        <h3>简寻</h3>
                         <div class="work-mask"></div>
                     </div>
-                    <div class="work_view">
-                        <img src="src/pic/workspage/havebook - Assistor.png" alt="works-logo">
-                        <h3>有书</h3>
+                    <div class="work_view" data-slide="10"><img class="lazy" data-original="static/src/pic/workspage/miemie - Assistor.png" alt="works-logo">
+                        <h3>咩咩</h3>
                         <div class="work-mask"></div>
                     </div>
-                    <div class="work_view">
-                        <img src="src/pic/workspage/havebook - Assistor.png" alt="works-logo">
-                        <h3>有书</h3>
+                    <div class="work_view" data-slide="11"><img class="lazy" data-original="static/src/pic/workspage/poketbook - Assistor.png" alt="works-logo">
+                        <h3>口袋书目</h3>
                         <div class="work-mask"></div>
                     </div>
-                    <div class="work_view">
-                        <img src="src/pic/workspage/havebook - Assistor.png" alt="works-logo">
-                        <h3>有书</h3>
+                    <div class="work_view" data-slide="12"><img class="lazy" data-original="static/src/pic/workspage/touch color - Assistor.png" alt="works-logo">
+                        <h3>touch color</h3>
                         <div class="work-mask"></div>
                     </div>
-                    <div class="work_view">
-                        <img src="src/pic/workspage/havebook - Assistor.png" alt="works-logo">
-                        <h3>有书</h3>
+                    <div class="work_view" data-slide="13"><img class="lazy" data-original="static/src/pic/workspage/yifang - Assistor.png" alt="works-logo">
+                        <h3>一方</h3>
                         <div class="work-mask"></div>
                     </div>
-                    <div class="work_view">
-                        <img src="src/pic/workspage/havebook - Assistor.png" alt="works-logo">
-                        <h3>有书</h3>
+                    <div class="work_view" data-slide="14"><img class="lazy" data-original="static/src/pic/workspage/pupu-assi.png" alt="works-logo">
+                        <h3>扑扑</h3>
                         <div class="work-mask"></div>
                     </div>
-                    <div class="work_view">
-                        <img src="src/pic/workspage/havebook - Assistor.png" alt="works-logo">
-                        <h3>有书</h3>
-                        <div class="work-mask"></div>
-                    </div>
-                    <div class="work_view">
-                        <img src="src/pic/workspage/havebook - Assistor.png" alt="works-logo">
-                        <h3>有书</h3>
-                        <div class="work-mask"></div>
-                    </div>
-                    <div class="work_view">
-                        <img src="src/pic/workspage/havebook - Assistor.png" alt="works-logo">
-                        <h3>有书</h3>
-                        <div class="work-mask"></div>
-                    </div>
-                    <div class="work_view">
-                        <img src="src/pic/workspage/havebook - Assistor.png" alt="works-logo">
-                        <h3>有书</h3>
+                    <div class="work_view" data-slide="15"><img class="lazy" data-original="static/src/pic/workspage/cost-assi.png" alt="works-logo">
+                        <h3>COST</h3>
                         <div class="work-mask"></div>
                     </div>
                 </div>
-                <div class="works-details">
-                    <!-- web -->
-                    <div class="slide">
-                        <img src="src/pic/workspage/youshu.jpg" alt="youshu">
-                        <h1>有书</h1>
-                        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。
-                        </p>
-                    </div>
-                    <div class="slide">
-                        <img src="src/pic/workspage/youshu.jpg" alt="youshu">
-                        <h1>有书</h1>
-                        <p>有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。
-                        </p>
-                    </div>
-                    <div class="slide">
-                        <img src="src/pic/workspage/youshu.jpg" alt="youshu">
-                        <h1>有书</h1>
-                        <p>有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。
-                        </p>
-                    </div>
-                    <div class="slide">
-                        <img src="src/pic/workspage/youshu.jpg" alt="youshu">
-                        <h1>有书</h1>
-                        <p>有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。
-                        </p>
-                    </div>
-                    <div class="slide">
-                        <img src="src/pic/workspage/youshu.jpg" alt="youshu">
-                        <h1>有书</h1>
-                        <p>有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。
-                        </p>
-                    </div>
-                    <div class="slide">
-                        <img src="src/pic/workspage/youshu.jpg" alt="youshu">
-                        <h1>有书</h1>
-                        <p>有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。
-                        </p>
-                    </div>
-                    <div class="slide">
-                        <img src="src/pic/workspage/youshu.jpg" alt="youshu">
-                        <h1>有书</h1>
-                        <p>有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。
-                        </p>
-                    </div>
-                    <div class="slide">
-                        <img src="src/pic/workspage/youshu.jpg" alt="youshu">
-                        <h1>有书</h1>
-                        <p>有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。
-                        </p>
-                    </div>
-                    <div class="slide">
-                        <img src="src/pic/workspage/youshu.jpg" alt="youshu">
-                        <h1>有书</h1>
-                        <p>有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。
-                        </p>
-                    </div>
-                    <div class="slide">
-                        <img src="src/pic/workspage/youshu.jpg" alt="youshu">
-                        <h1>有书</h1>
-                        <p>有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。
-                        </p>
-                    </div>
-                    <div class="slide">
-                        <img src="src/pic/workspage/youshu.jpg" alt="youshu">
-                        <h1>有书</h1>
-                        <p>有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。
-                        </p>
-                    </div>
-                    <div class="slide">
-                        <img src="src/pic/workspage/youshu.jpg" alt="youshu">
-                        <h1>有书</h1>
-                        <p>有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。
-                        </p>
-                    </div>
-                    <div class="slide">
-                        <img src="src/pic/workspage/youshu.jpg" alt="youshu">
-                        <h1>有书</h1>
-                        <p>有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。
-                        </p>
-                    </div>
-                    <div class="slide">
-                        <img src="src/pic/workspage/youshu.jpg" alt="youshu">
-                        <h1>有书</h1>
-                        <p>有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。
-                        </p>
-                    </div>
-                    <div class="slide">
-                        <img src="src/pic/workspage/youshu.jpg" alt="youshu">
-                        <h1>有书</h1>
-                        <p>有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。
-                        </p>
-                    </div>
-                    <div class="slide">
-                        <img src="src/pic/workspage/youshu.jpg" alt="youshu">
-                        <h1>有书</h1>
-                        <p>有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。有书是一款非常好的作品。
-                        </p>
-                    </div>
+                <div class="works-details"><span class="triangle">◀</span>
+                    <div class="slide"><img data-src="static/src/pic/workspage/shangtian1.png" alt="welcome to unique-studio" style="font-size:12px"></div>
+                    <div class="slide"><img data-src="static/src/pic/workspage/picread.jpg" alt="welcome to unique-studio" style="font-size:12px"></div>
+                    <div class="slide"><img data-src="static/src/pic/workspage/yiji.png" alt="welcome to unique-studio" style="font-size:12px"></div>
+                    <div class="slide"><img data-src="static/src/pic/workspage/youshu.jpg" alt="welcome to unique-studio" style="font-size:12px"></div>
+                    <div class="slide"><img data-src="static/src/pic/workspage/eaco.jpg" alt="welcome to unique-studio" style="font-size:12px"></div>
+                    <div class="slide"><img data-src="static/src/pic/workspage/fuubo.jpg" alt="welcome to unique-studio" style="font-size:12px"></div>
+                    <div class="slide"><img data-src="static/src/pic/workspage/gamee.jpg" alt="welcome to unique-studio" style="font-size:12px"></div>
+                    <div class="slide"><img data-src="static/src/pic/workspage/weixin.png" alt="welcome to unique-studio" style="font-size:12px"></div>
+                    <div class="slide"><img data-src="static/src/pic/workspage/overhust.png" alt="welcome to unique-studio" style="font-size:12px"></div>
+                    <div class="slide"><img data-src="static/src/pic/workspage/jianxun.jpg" alt="welcome to unique-studio" style="font-size:12px"></div>
+                    <div class="slide"><img data-src="static/src/pic/workspage/miemie.jpg" alt="welcome to unique-studio" style="font-size:12px"></div>
+                    <div class="slide"><img data-src="static/src/pic/workspage/koudai.png" alt="welcome to unique-studio" style="font-size:12px"></div>
+                    <div class="slide"><img data-src="static/src/pic/workspage/TC.png" alt="welcome to unique-studio" style="font-size:12px"></div>
+                    <div class="slide"><img data-src="static/src/pic/workspage/yigang.jpg" alt="welcome to unique-studio" style="font-size:12px"></div>
+                    <div class="slide"><img data-src="static/src/pic/workspage/pupu.jpg" alt="welcome to unique-studio" style="font-size:12px"></div>
+                    <div class="slide"><img data-src="static/src/pic/workspage/cost.jpg" alt="welcome to unique-studio" style="font-size:12px"></div>
                 </div>
-                <!-- </main> -->
-                <!-- <div class="cd-cover-layer"></div>
-                <div class="cd-loading-bar"></div> -->
             </div>
-            <!-- works page end -->
-            <!-- contact page bg -->
             <div data-anchor="contact_page" class="page" id="contact">
                 <div class="slide">
                     <form class="cd-form floating-labels">
                         <fieldset>
-                            <!-- <legend>Account Info</legend>-->
-                            <div class="error-message">
-                                <p>现在加入</p>
+                            <div class="icon">
+                                <input class="user" type="text" name="name" id="contact_name" placeholder="姓名" required>
                             </div>
                             <div class="icon">
-                                <label class="cd-label" for="name">姓名</label>
-                                <input class="user" type="text" name="name" required>
+                                <input class="user" type="text" name="info" id="contact_info" placeholder="院系/专业/年级" required>
                             </div>
                             <div class="icon">
-                                <label class="cd-label" for="major">院系/专业/年级</label>
-                                <input class="user" type="text" name="info" required>
+                                <input class="user" type="text" name="phone" id="contact_phone" placeholder="电话" pattern="((\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$)" title="请输入正确格式的电话号码" required>
                             </div>
                             <div class="icon">
-                                <label class="cd-label" for="Tel">电话</label>
-                                <input class="user" type="text" name="phone" required>
+                                <input class="user" type="text" name="phone_2" id="contact_phone2" placeholder="备用电话(选填)" pattern="((\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$)" title="请输入正确格式的电话号码" style="background-color:transparent;">
                             </div>
-                            <div class="icon">
-                                <label class="cd-label" for="Tel">备用电话</label>
-                                <input class="user" type="text" name="phone2" required>
+                            <div style="margin:0;">
+                                <select name="group" id="contact_select" placeholder="选择组别" required>
+                                    <option value="7">选择组别</option>
+                                    <option value="0">web</option>
+                                    <option value="2">unique lab</option>
+                                    <option value="4">design</option>
+                                    <option value="3">pm</option>
+                                    <option value="5">ios</option>
+                                    <option value="1">android</option>
+                                    <option value="6">game</option>
+                                </select>
                             </div>
-                            <div class="icon">
-                                <label class="cd-label" for="email">Email</label>
-                                <input class="email" type="email" name="email">
+                            <div class="radioh4" style="z-index:5;">
+                                <h4>性别</h4>
+                                <ul class="cd-form-list" style="margin-top:-25px">
+                                    <li>
+                                        <div style="margin:0 10px;">
+                                            <input type="radio" name="gender" id="cd-radio-1" value="1" checked>
+                                            <label for="cd-radio-1">男</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div style="margin:0 10px;">
+                                            <input type="radio" name="gender" id="cd-radio-2" value="0">
+                                            <label for="cd-radio-2">女</label>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
-                            
-                            <!-- ... -->
+                            <div class="radioh4">
+                                <h4>所在校区</h4>
+                                <ul class="cd-form-list" style="margin-top:-25px">
+                                    <li>
+                                        <div style="margin:0 10px;">
+                                            <input type="radio" name="dorm" id="cd-radio-3" value="yy" checked>
+                                            <label for="cd-radio-3">韵苑</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div style="margin:0 10px;">
+                                            <input type="radio" name="dorm" id="cd-radio-4" value="qy">
+                                            <label for="cd-radio-4">沁苑</label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div style="margin:0 10px;">
+                                            <input type="radio" name="dorm" id="cd-radio-5" value="zs">
+                                            <label for="cd-radio-5">紫菘</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </fieldset>
                         <fieldset>
-                            <div class="radioh4">
-                                <h4>性别</h4>
-                                <ul class="cd-form-list">
-                                    <li>
-                                        <input type="radio" name="gender" id="cd-radio-1" value="1" checked>
-                                        <label for="cd-radio-1">男</label>
-                                    </li>
-                                    <li>
-                                        <input type="radio" name="gender" id="cd-radio-2" value="0">
-                                        <label for="cd-radio-2">女 </label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="radioh4" style="margin-top:-10%">
-                                <!-- <h4>nimade</h4> -->
-                                <h4>所在校区</h4>
-                                <ul class="cd-form-list">
-                                    <li>
-                                        <input type="radio" name="dorm" id="cd-radio-3" value="0" checked>
-                                        <label for="cd-radio-3">韵苑 </label>
-                                    </li>
-                                    <li>
-                                        <input type="radio" name="dorm" id="cd-radio-4" value="1">
-                                        <label for="cd-radio-4">沁苑 </label>
-                                    </li>
-                                    <li>
-                                        <input type="radio" name="dorm" id="cd-radio-5" value="2">
-                                        <label for="cd-radio-5">紫菘 </label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4>选择组别</h4>
-                                <p class="cd-select icon">
-                                    <select class="budget" name="group">
-                                        <option >选择组别</option>
-                                        <option value="0">web</option>
-                                        <option value="1">unique lab</option>
-                                        <option value="2">design</option>
-                                        <option value="3">pm</option>
-                                        <option value="4">ios</option>
-                                        <option value="5">android</option>
-                                        <option value="6">game策划</option>
-                                        <option value="7">game程序</option>
-                                    </select>
-                                </p>
-                            </div>
                             <div class="icon">
-                                <label class="cd-label" for="cd-textarea">自我介绍/组别意向/个人优势</label>
-                                <textarea class="message" name="cd-textarea" id="cd-textarea" required></textarea>
+                                <textarea class="message" name="intro" id="cd-textarea" placeholder="自我介绍/组别意向/个人优势(1000字以内)" style="background-color:transparent" required></textarea>
+                            </div>
+                            <div class="icon" style="margin:0 10px;">
+                                <h4 style="display:inline-block;margin-top:-10%">验证码</h4><img src="/pil" alt="验证图片" id="kaptcha" style="font-size:18px">
+                                <input class="user" type="text" name="text" placeholder="请输入上方验证码" style="background-color:transparent" required>
                             </div>
                             <div>
-                                <input type="submit" value="提交">
+                                <input type="submit" value="报名请发邮件" id="contact_send" style="margin-right:50%" disabled="disabled">
                             </div>
                         </fieldset>
                     </form>
                 </div>
                 <div class="slide contactus">
-                    <form class="cd-form floating-labels">
-                        <fieldset>
-                            <!-- <legend>Account Info</legend> -->
-                            <div class="error-message">
-                                <p>联系我们</p>
-                            </div>
-                            <div class="icon">
-                                <label class="cd-label" for="name">姓名</label>
-                                <input class="user" type="text" name="name" required>
-                            </div>
-                            <div class="icon">
-                                <label class="cd-label" for="name">专业</label>
-                                <input class="user" type="text" name="name" required>
-                            </div>
-                            <div class="icon">
-                                <label class="cd-label" for="name">邮箱</label>
-                                <input class="email" type="email" name="name" required>
-                            </div>
-                            <div class="icon">
-                                <label class="cd-label" for="cd-textarea">想法与建议</label>
-                                <textarea class="message" name="cd-textarea" id="cd-textarea" required></textarea>
-                            </div>
-                            <div>
-                                <input type="submit" value="提交">
-                            </div>
-                        </fieldset>
-                        <fieldset>
-                            <h3 class="first">hr@hustunique.com</h3>
-                            <h3>+86 155-2727-9060 孟涛</h3>
-                            <div class="contact-brands">
-                                <span id="contact-weibo"></span>
-                                <span id="contact-weixin"></span>
-                                <span id="contact-renren"></span>
-                            </div>
-                            <h3>中国湖北省武汉市洪山区珞瑜路1037号华中科技大学启明学院亮胜楼8楼</h3>
-                            <h3>8th Floor, Building LiangSheng, 1037 Luoyu Road, Wuhan 430074, P.R.China</h3>
-                            <div style="width=100%;height:200px;border:#ccc solid 1px;" id="dituContent"></div>
-                        </fieldset>
-                    </form>
+                    <div class="contactinfo">
+                        <h1>联系我们</h1>
+                        <h2>官方微信</h2>
+                        <p>搜索微信号：uniquestudio</p>
+                        <h2>官方微博</h2>
+                        <p><a href="http://weibo.com/uniquestudio?refer_flag=1001030102" style="text-decoration:underline;">华中科技大学联创团队</a></p>
+                        <h2>联系地址</h2>
+                        <p>中国湖北省武汉市洪山区
+                            <br/>珞瑜路1037号华中科技大学启明学院亮胜楼8楼
+                            <br/>8th-Floor，Building-LiangSheng，
+                            <br/>1037-Luoyu-Road，Wuhan，430074，P.R.China</p>
+                        <h2>官方邮箱</h2>
+                        <p>hr@hustunique.com</p>
+                        <h2>团队负责人</h2>
+                        <p>郭映中/YingzhongGuo
+                            <br/> yingzhongguo@hustunique.com</p>
+                    </div>
                 </div>
             </div>
-            <!-- contact page end -->
-            <!--footer-->
-            <div class="page fp-auto-height" id="footer">
+            <div data-anchor="footer_page" class="page fp-auto-height" id="footer">
                 <h3>Copyright © 2016 Unique Studio All rights reserved</h3>
-                <div id="oldVersion">旧版入口</div>
+                <div id="oldVersion"><a style="color:#fff;" target="_blank" href="https://uniquestudio.github.io">旧版入口</a></div>
             </div>
         </div>
-        <!-- fullpage end -->
     </section>
-    <script src="js/jquery.fullPage.js"></script>
-    <script src="js/workspage.js"></script>
-    <script src="js/contactpage.js"></script>
-    <script src="js/eventpage.js"></script>
-    <script src="js/main.js"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true" async></script>
-    
-    <!-- <script src="js/pagechange.js"></script> -->
+    <script src="static/js/main.min.js"></script>
 </body>
 
 </html>
